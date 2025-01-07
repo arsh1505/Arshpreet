@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @keyframes scaleRotateAnimation {
+    0% {
+      transform: scale(1) rotate(0deg);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.2) rotate(15deg);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  
+  .animate-scale-rotate {
+    animation: scaleRotateAnimation 1s ease-in-out forwards;
+  }
+   */
+
+   /* @keyframes scaleRotateAnimation {
+    0% {
+      transform: scale(1) rotate(0deg);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.2) rotate(15deg);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  
+  .animate-scale-rotate {
+    animation: scaleRotateAnimation 1s ease-in-out forwards;
+  }
+  
+   */
+
+   /* @keyframes scaleRotateAnimation {
+    0% {
+      transform: scale(1) rotate(0deg);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.2) rotate(15deg);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  
+  .animate-scale-rotate {
+    animation: scaleRotateAnimation 1s ease-in-out forwards;
+  }
+   */
+
+   /* Define animation for left-to-right */
+@keyframes left-to-right {
+    from {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Define animation for right-to-left */
+  @keyframes right-to-left {
+    from {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Apply animations with different delays for each row */
+  .animate-left-to-right {
+    animation: left-to-right 1s ease-out forwards;
+  }
+  
+  .animate-right-to-left {
+    animation: right-to-left 1s ease-out forwards;
+  }
+  @keyframes slideInFromBottom {
+    from {
+      transform: translateY(100%); /* Starts off-screen from the bottom */
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0); /* Moves to its final position */
+      opacity: 1;
+    }
+  }
+  
+  .animate-slide-in-from-bottom {
+    animation: slideInFromBottom 1s ease-out; /* Adjust duration and easing as needed */
+  }
+  
+  
+  /* Optional: You can add a delay to each element to stagger their animations */
+  /* .delay-0 {
+    animation-delay: 0s;
+  }
+  
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+  
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+  
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+  
+  .delay-400 {
+    animation-delay: 0.4s;
+  } */
+
+  /* Define animation for left-to-right */
+@keyframes left-to-right {
+    from {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%); /* Starts off-screen from the right */
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0); /* Final position */
+      opacity: 1;
+    }
+  }
+  
+  .animate-slide-in {
+    animation: slideIn 1s ease-out; /* Adjust duration and easing as needed */
+  }
+  
+  
+  @keyframes slide-left {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-right {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-slide-left {
+    animation: slide-left 0.5s ease-out forwards;
+  }
+  
+  .animate-slide-right {
+    animation: slide-right 0.5s ease-out forwards;
+  }
+  
+  
+  
+  /* Define animation for right-to-left */
+  @keyframes right-to-left {
+    from {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Apply animations with different delays for each row */
+  .animate-left-to-right {
+    animation: left-to-right 1s ease-out forwards;
+  }
+  
+  .animate-right-to-left {
+    animation: right-to-left 1s ease-out forwards;
+  }
+  
+  /* Optional: You can add a delay to each element to stagger their animations */
+  .delay-0 {
+    animation-delay: 0s;
+  }
+  
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+  
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+  
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+  
+  .delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  body{
+      font-family: "Jacques Francois Shadow", serif;
+      font-family: Poppins, sans-serif;
+    
+  }
+
+  
