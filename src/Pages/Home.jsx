@@ -12,7 +12,7 @@ import education from "../assets/education.png";
 import { useInView } from "react-intersection-observer";
 import exp from "../assets/exp.png";
 import Contact from "../Components/Contact";
-import Resume from '../assets/resume.pdf';
+import Resume from '../assets/ArshpreetKaur.pdf';
 import Form from "../Components/Form";
 import Footer from "../Components/Footer";
 
