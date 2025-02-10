@@ -46,7 +46,7 @@ const Home = () => {
         <motion.img
           src={s1}
           alt=""
-          className="absolute left-0 overflow-hidden hidden sm:block"
+          className="absolute left-0 overflow-hidden hidden lg:block"
           style={{ marginTop: "14rem" }}
           initial={{ y: "100%", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -55,7 +55,7 @@ const Home = () => {
         <motion.img
           src={s2}
           alt=""
-          className="absolute right-0 h-60 md:h-96 mt-10 hidden sm:block"
+          className="absolute right-0 h-60 md:h-96 mt-10 hidden lg:block"
           initial={{ y: "-100%", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
