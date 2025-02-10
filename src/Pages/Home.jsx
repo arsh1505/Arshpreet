@@ -85,7 +85,7 @@ const Home = () => {
             <h2>Email: <span className="text-gray-600">arshpreet27014@gmail.com</span></h2>
             <h2>Phone: <span className="text-gray-600">9041127014</span></h2>
             <h2>LinkedIn: <a href="https://www.linkedin.com/in/arshpreet-kaur-576938277" className="text-blue-500">My LinkedIn</a></h2>
-            <a href={Resume} download='resume' className="block mt-3 w-32 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center">Download CV</a>
+            <a href={Resume} download='resume' className=" mt-3 w-32 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center">Download CV</a>
           </div>
         </div>
       </div>
@@ -136,8 +136,8 @@ const Home = () => {
               <h2 className="text-2xl md:text-3xl font-bold mb-4">Experience</h2>
               <h3 className="text-xl font-semibold">Freelance Front-end Developer</h3>
               <p>Developed the complete front-end for paslaundry.in, creating a responsive and user-friendly interface.</p>
-              <h3 className="text-xl font-semibold mt-4">Front-end Developer at Bringle Tech Mohali</h3>
-              <p>(November 2024 - Present)</p>
+              <h3 className="text-xl font-semibold mt-4">Front-end Developer at Bringle Tech Private Limited Mohali</h3>
+              <p>(August 2024 - Present)</p>
             </div>
           )}
         </div>

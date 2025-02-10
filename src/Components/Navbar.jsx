@@ -1,36 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div>
-      <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 ">
+      {/* Navbar */}
+      <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a
             href="#"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <span
-              className="self-center text-2xl font-semibold whitespace-nowrap  dark:text-white"
+              className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
               style={{ fontFamily: "Jacques Francois Shadow" }}
             >
               Arshpreet Kaur
             </span>
           </a>
-          <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+
+          {/* Contact button and menu toggle */}
+          <div className="flex md:order-2 space-x-3 rtl:space-x-reverse">
             <a
-              type="button"
               href="#contact"
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              className="hidden md:block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               Contact
             </a>
-            
             <button
-              data-collapse-toggle="navbar-sticky"
+              onClick={toggleMenu}
               type="button"
               className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-              aria-controls="navbar-sticky"
-              aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
               <svg
@@ -42,24 +47,26 @@ const Navbar = () => {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M1 1h15M1 7h15M1 13h15"
                 />
               </svg>
             </button>
           </div>
+
+          {/* Responsive menu */}
           <div
-            className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-            id="navbar-sticky"
+            className={`${
+              isOpen ? "block" : "hidden"
+            } items-center justify-between w-full md:flex md:w-auto md:order-1`}
           >
-            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
                 <a
                   href="#home"
-                  className=" h-8 w-24 text-center p-2 bg-blue-700 flex justify-center items-center text-white rounded-xl md:text-white md:p-0 md:dark:text-white"
-                  aria-current="page"
+                  className="block text-center py-2 px-4 rounded-xl text-white bg-blue-700 hover:bg-blue-800 md:bg-transparent md:hover:bg-transparent md:text-blue-700 dark:text-white dark:hover:bg-gray-700"
                 >
                   Home
                 </a>
@@ -67,7 +74,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#resume"
-                  className=" h-8 w-24 text-center p-2 flex justify-center items-center text-white  rounded-xl bg-blue-700 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  className="block text-center py-2 px-4 mt-2 md:mt-0 rounded-xl text-white bg-blue-700 hover:bg-blue-800 md:bg-transparent md:hover:bg-transparent md:text-blue-700 dark:text-white dark:hover:bg-gray-700"
                 >
                   Resume
                 </a>
@@ -75,7 +82,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#skills"
-                  className=" h-8 w-24 text-center p-2 flex justify-center items-center text-white rounded-xl bg-blue-700 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  className="block text-center py-2 px-4 mt-2 md:mt-0 rounded-xl text-white bg-blue-700 hover:bg-blue-800 md:bg-transparent md:hover:bg-transparent md:text-blue-700 dark:text-white dark:hover:bg-gray-700"
                 >
                   Skills
                 </a>
@@ -83,9 +90,17 @@ const Navbar = () => {
               <li>
                 <a
                   href="#projects"
-                  className=" h-8 w-24 text-center p-2 flex justify-center items-center text-white rounded-xl bg-blue-700 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  className="block text-center py-2 px-4 mt-2 md:mt-0 rounded-xl text-white bg-blue-700 hover:bg-blue-800 md:bg-transparent md:hover:bg-transparent md:text-blue-700 dark:text-white dark:hover:bg-gray-700"
                 >
                   Projects
+                </a>
+              </li>
+              <li className="md:hidden">
+                <a
+                  href="#contact"
+                  className="block text-center py-2 px-4 mt-2 rounded-xl text-white bg-blue-700 hover:bg-blue-800"
+                >
+                  Contact
                 </a>
               </li>
             </ul>
